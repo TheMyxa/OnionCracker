@@ -1,19 +1,36 @@
 <html>
 <body>
+
+<style>
+    body {
+        background-image: url('https://news-iphone.ru/wp-content/uploads/2020/06/bg-paramhost-empresarial-1536x864.jpg');
+    }
+</style>
+
 <div>
     <form method="post" action="add" name="product">
         <input type="text" name="name" placeholder="Введите Имя"/>
         <input type="text" name="surname" placeholder="Введите Фамилию">
         <input type="text" name="phone" placeholder="Введите Номер">
-        <button type="submit">Добавить</button>
+        <button type="submit">
+            <img src="https://sun9-42.userapi.com/c846322/v846322641/4865f/HAQtsJ99aVM.jpg" alt="" style="vertical-align:middle">
+            Добавить</button>
     </form>
 </div>
 
 
 
 <div>Список сообщений</div>
+
 <table>
-    <thead>
+
+    <colgroup>
+        <col span="2" style="background:#008500"><!-- С помощью этой конструкции задаем цвет фона для первых двух столбцов таблицы-->
+        <col style="background-color:#A64B00"><!-- Задаем цвет фона для следующего (одного) столбца таблицы-->
+        <col style="background-color:#A64B00">
+    </colgroup>
+
+    <thead >
     <tr>
         <th>id</th>
         <th>name</th>
@@ -26,7 +43,7 @@
     </thead>
     <tbody>
     {{#product}}
-        <tr>
+        <tr >
             <td> {{id}} </td>
             <td> {{name}} </td>
             <td> {{surname}} </td>
