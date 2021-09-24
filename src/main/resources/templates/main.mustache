@@ -1,0 +1,45 @@
+<html>
+<body>
+<div>
+    <form method="post" action="add" name="product">
+        <input type="text" name="name" placeholder="Введите Имя"/>
+        <input type="text" name="surname" placeholder="Введите Фамилию">
+        <input type="text" name="phone" placeholder="Введите Номер">
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+
+
+
+<div>Список сообщений</div>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>surname</th>
+        <th>phone</th>
+        <th></th>
+        <th></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {{#product}}
+        <tr>
+            <td> {{id}} </td>
+            <td> {{name}} </td>
+            <td> {{surname}} </td>
+            <td> {{phone}} </td>
+            <td><a href="/delete/{{id}}"> Удалить</a></td>
+            <td><a href="/products/{{id}}/edit"> Обновить</a></td>
+
+
+        </tr>
+    {{/product}}
+    </tbody>
+</table>
+
+</body>
+</html>
+

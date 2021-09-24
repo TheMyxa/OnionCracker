@@ -1,0 +1,16 @@
+<html>
+<body>
+<h1>редактирование пользователя </h1>
+{{#product}}
+    <form method="post" action="/products/{{id}}/edit" name="product">
+        <input type="text" name="id" readonly disabled value="{{#id}} {{id}} {{/id}} "/>
+        <input type="text" name="name"  value="{{#name}} {{name}} {{/name}} "/>
+        <input type="text" name="surname"  value="{{#surname}} {{surname}}{{/surname}}"/>
+        <input type="text" name="phone"  value="{{#phone}} {{phone}} {{/phone}} "/>
+        <button type="submit">Изменить</button>
+    </form>
+{{/product}}
+</body>
+</html>
+
+

@@ -1,0 +1,40 @@
+<html>
+<body>
+
+<div>Список сообщений</div>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>surname</th>
+            <th>phone</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {{#product}}
+            <tr>
+                <td> {{id}} </td>
+                <td> {{name}} </td>
+                <td> {{surname}} </td>
+                <td> {{phone}} </td>
+                <td><a href="/delete/{{id}}"> Удалить</a></td>
+                <td><a href="/update/{{id}}"> Обновить</a></td>
+
+
+            </tr>
+        {{/product}}
+        </tbody>
+    </table>
+
+</div>
+
+
+</body>
+</html>
+
